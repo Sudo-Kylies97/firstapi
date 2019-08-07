@@ -9,7 +9,7 @@ variables:
   dockerId: 'tangentkyle'
 
 steps:
-- script: docker build -f Dockerfile -t $(imageName) .
+- script: docker build -f WebApplication1/WebApplication1/Dockerfile -t $(imageName) .
 - script: docker login -u $(dockerId) -p $(pswd)
 - script: docker push $(imageName)
 - task: CopyFiles@2
