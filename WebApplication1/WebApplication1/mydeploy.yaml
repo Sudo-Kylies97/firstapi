@@ -15,3 +15,14 @@ spec:
           name: firstapi
           ports:
             - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: firstapi
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: firstapi
