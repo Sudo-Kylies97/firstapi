@@ -16,8 +16,8 @@ steps:
   inputs:
     sourceFolder: $(Build.SourcesDirectory)
     contents: |
-      '**/myservice.yaml' 
-      '**/mydeploy.yaml'
+      'WebApplication1/WebApplication1/myservice.yaml' 
+      'WebApplication1/WebApplication1/mydeploy.yaml'
     targetFolder: $(Build.ArtifactStagingDirectory)
     overWrite: true
 - task: PublishBuildArtifacts@1
