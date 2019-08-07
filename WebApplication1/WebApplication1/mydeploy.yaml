@@ -1,0 +1,17 @@
+﻿apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: firstapi
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: firstapi
+    spec:
+      containers:
+        - image: "tangentkyle/firstapi"
+          imagePullPolicy: Always
+          name: firstapi
+          ports:
+            - containerPort: 80
