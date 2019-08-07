@@ -14,10 +14,8 @@ steps:
 - script: docker push $(imageName)
 - task: CopyFiles@2
   inputs:
-    sourceFolder: $(Build.SourcesDirectory)
-    contents: |
-      'WebApplication1/WebApplication1/myservice.yaml' 
-      'WebApplication1/WebApplication1/mydeploy.yaml'
+    sourceFolder: $(WebApplication1/WebApplication1)
+    contents: '**/mydeploy.yaml'
     targetFolder: $(Build.ArtifactStagingDirectory)
     overWrite: true
 - task: PublishBuildArtifacts@1
