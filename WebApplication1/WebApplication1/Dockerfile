@@ -6,7 +6,7 @@ COPY WebApplication1/WebApplication1/*.csproj ./
 RUN dotnet restore
 
 # copy everything else and build
-COPY . ./
+COPY  WebApplication1/WebApplication1/. ./
 RUN dotnet publish -c Release -o out
 
 # build runtime image
